@@ -4,15 +4,21 @@
         <meta charset="utf-8">
         <title>Hello vue</title>
         <link rel="stylesheet" href="test.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     </head>
     <body>
 
         <div id="root">
 
-            <h1>{{ messaggio }}!</h1>
+            <h1>{{ title }}!</h1>
 
-            <img :src="urlImage" :alt="imageText">
+            <img :src="urlImage" :alt="altImage" :class='classText'>
+
+            <div class="buttons">
+                <button @click='classeDinamica(100)'>100%</button>
+                <button @click='classeDinamica(75)'>75%</button>
+                <button @click='classeDinamica(50)'>50%</button>
+            </div>
 
         </div>
 
